@@ -1,6 +1,6 @@
 {
-  "home": "http://amarmalakar.github.io/google__keep__app__clone",
-  "name": "keep__app",
+  "home": "http://amarmalakar.github.io/google__keep__clone",
+  "name": "google__keep__clone",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
