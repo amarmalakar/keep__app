@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open sans', sans-serif;
+}
+
+.wrapper {
+  padding: 15px;
+}
+
+.app__icon {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app__icon > span {
+  font-weight: 600;
+  font-size: 24px;
+  margin-left: 16px;
+}
+
+.note__app--container {
+  width: 100%;
+  height: 100vh;
+}
+
+.note__form--first {
+  max-width: 596px;
+  margin: auto;
+  padding: 16px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
+  border-radius: 10px;
+  cursor: text;
+  font-weight: 600;
+  color: #888;
+}
+
+.note__form--wrapper {
+  max-width: 596px;
+  margin: auto;
+  padding: 16px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
+  border-radius: 10px;
+  background-color: #fff;
+}
+input, textarea {
+  font-family: inherit;
+  display: block;
+  width: 100%;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+input {margin-bottom: 24px;}
+.textarea__div {
+  max-height: 300px;
+  height: 80px;
+}
+textarea {
+  resize: none;
+  height: 100%;
+}
+.note__form--wrapper-btns {
+  display: flex;
+  justify-content: flex-end;
+}
+.note__form--wrapper-btns > button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  color: #666;
+  font-size: 15px;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+.note__form--wrapper-btns > button:hover {
+  background-color: #efefef;
+}
+
+.note__list {
+  max-width: 1024px;
+  margin: auto;
+  padding: 32px 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+.single__note {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+.single__note:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+.single__note--title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+
+
+.full__page__overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;left: 0;
+  padding-top: 100px;
+}
+.full__page__overlay .note__form--wrapper {
+  animation: bounc .1s linear;
+}
+
+@media (max-width: 896px) {
+  .note__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 724px) {
+  .note__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 524px) {
+  .note__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+/* Animations */
+@keyframes bounc {
+  0% {transform: scale(.8);}
+}
